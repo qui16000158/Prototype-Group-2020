@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         float yVel = rb.velocity.y; // Cache the player's y velocity
 
         // Check if anything is within radius of the ground checker (Only checks default layer)
-        bool touchingGround = Physics.CheckSphere(groundChecker.position, 0.5f, 1 << 0);
+        bool touchingGround = Physics.CheckSphere(groundChecker.position, 0.2f, 1 << 0);
 
         // Check if the player is touching the ground
         if(touchingGround){
