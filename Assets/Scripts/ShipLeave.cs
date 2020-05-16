@@ -12,6 +12,8 @@ public class ShipLeave : MonoBehaviour
 {
     [SerializeField]
     Animator shipAnimator; // The animator for the ship
+    [SerializeField]
+    Animator fadeAnimator; // The fade to black animator
 
     [SerializeField]
     GameObject player; // Allows us to disable the player before take off
@@ -66,7 +68,9 @@ public class ShipLeave : MonoBehaviour
         player.SetActive(false); // Disable the player
         shipCamera.SetActive(true); // Enable the ship camera
         shipAnimator.SetTrigger("Take Off"); // Start take off animation
-        yield return new WaitForSeconds(takeOffTime); // Wait for the take off time to pass
+        yield return new WaitForSeconds(takeOffTime - 0.5f); // Wait for the take off time to pass
+        fadeAnimator.SetTrigger("Fade"); // Trigger the fade to black animation
+        yield return new WaitForSeconds(0.5f); // Wait 0.5 seconds
         SceneManager.LoadScene(sceneToLoad); // Load the scene
     }
 }
