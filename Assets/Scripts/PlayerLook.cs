@@ -20,12 +20,6 @@ public class PlayerLook : MonoBehaviour
 
     float xRotation = 0f; // We store the total X rotation allowing us to clamp it
 
-    // Runs before the first frame update
-    void Start(){
-        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
-        Cursor.visible = false; // hide hte cursor
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -73,13 +73,11 @@ public class PlayerInteraction : MonoBehaviour
 
     // Locks the player's cursor
     public void LockCursor(){
-        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor in place
-        Cursor.visible = false; // Hide the cursor
+        CursorManager.instance.Remove("Player Interaction"); // Remove from list cursor unlockers
     }
 
     // Unlocks the player's cursor
     public void UnlockCursor(){
-        Cursor.lockState = CursorLockMode.None; // Unlock the curosr
-        Cursor.visible = true; // Show the cursor
+        CursorManager.instance.Add("Player Interaction"); // Add to list of cursor unlockers
     }
 }

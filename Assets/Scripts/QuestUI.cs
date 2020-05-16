@@ -74,12 +74,12 @@ public class QuestUI : MonoBehaviour
     public void ToggleCanvas(){
         questCanvas.SetActive(!questCanvas.activeSelf); // Toggle the quest canvas
         // Lock the cursor if quest canvas closed, otherwise open it
-        Cursor.lockState = questCanvas.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = questCanvas.activeSelf; // Set cursor visibility to equal quest canvas visibility
-
-        Quests.Add("Test Quest", "Do this", "then that", "Then you're done");
-        Quests.Add("Another Quest", "One", "Two", "Three");
-        Quests.Add("A Third Quest", "This is it", ".");
+        if(questCanvas.activeSelf){
+            CursorManager.instance.Add("Quest UI"); // Add quest ui to list of cursor unlockers
+        }
+        else{
+            CursorManager.instance.Remove("Quest UI"); // Remove quest ui from list of cursor unlockers.
+        }
 
         ResetButtons(); // Reset quest buttons when canvas is toggled
 

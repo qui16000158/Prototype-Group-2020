@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 // This class holds quest names, and their tasks
 // We can also check if the quest is completed
+[System.Serializable]
 public class Quest{
     public string questName; // The name of the quest
     public List<string> tasks; // The tasks required to complete the quest
@@ -29,7 +31,10 @@ public class Quest{
 
     // This will mark a task as completed and then check if the quest is complete
     public void CompleteTask(string taskName){
-        tasks.Remove(taskName); // Remove the task from the list
+        // Ensure the task is within the list
+        if(tasks.Contains(taskName)){
+            tasks.Remove(taskName); // Remove the task from the list
+        }
 
         CheckCompleted(); // Check if the quest has been completed
     }
