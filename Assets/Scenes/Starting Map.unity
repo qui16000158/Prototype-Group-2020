@@ -3831,10 +3831,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 865642745755090221, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1792317880297529724, guid: ccc0114954890774d9ec1522ac3320fa,
         type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792317880297529724, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275703477322756815, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3352030819964277615, guid: ccc0114954890774d9ec1522ac3320fa,
         type: 3}
@@ -3891,6 +3906,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3851436312922575512, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088145980322096119, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104222980453223785, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585673271414072267, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416026435818854553, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7781791947281693067, guid: ccc0114954890774d9ec1522ac3320fa,
         type: 3}
       propertyPath: player
@@ -3911,5 +3951,15 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1411050730}
+    - target: {fileID: 7781791947668592676, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458481535545857577, guid: ccc0114954890774d9ec1522ac3320fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc0114954890774d9ec1522ac3320fa, type: 3}
