@@ -31,4 +31,9 @@ public class Conversation : ScriptableObject
             foundEvent.RunEvent(); // Run the dialogue event
         }
     }
+
+    // Displays a hint
+    public void DisplayHint(string hint){
+        Hints._DisplayHint(hint); // Display hint to player
+    }
 }

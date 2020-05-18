@@ -25,6 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
                 RaycastHit hit; // The hit info the for below spherecast
                 if(Physics.SphereCast(transform.position, weapon.attackRadius, transform.forward, out hit, weapon.range)){
+                    Debug.Log(123);
                     Health hitHealth = hit.collider.GetComponent<Health>(); // The health for the hit object
                     // Check that the hit object has health
                     if(hitHealth != null){

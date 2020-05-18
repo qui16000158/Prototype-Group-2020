@@ -11,4 +11,9 @@ public class NPCInfo : MonoBehaviour
 {
     public new string name = "NPC"; // The NPCs name (Can be set in inspector)
     public Conversation starterConversation; // The conversation that starts when interacting
+
+    // This will change the starter conversation
+    public void SetConversation(Conversation conversation){
+        starterConversation = conversation; // Set the conversation
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 // James Quinney - QUI16000158
 // This script will initiate the ship's take off
@@ -24,7 +24,7 @@ public class ShipLeave : MonoBehaviour
     [SerializeField]
     float takeOffTime = 4.5f; // The time it takes to load the new scene from entering the ship
     [SerializeField]
-    int sceneToLoad = 0; // The scene that loads when entering the ship
+    UnityEvent eventOnLeave; // The event to run on leaving
 
     bool touchingPlayer; // Whether the ship is touching the player
     float touchDecay; // The time the ship will stop displaying the ship message
@@ -71,6 +71,6 @@ public class ShipLeave : MonoBehaviour
         yield return new WaitForSeconds(takeOffTime - 0.5f); // Wait for the take off time to pass
         fadeAnimator.SetTrigger("Fade"); // Trigger the fade to black animation
         yield return new WaitForSeconds(0.5f); // Wait 0.5 seconds
-        SceneManager.LoadScene(sceneToLoad); // Load the scene
+        eventOnLeave.Invoke(); // Invoke the leave event
     }
 }

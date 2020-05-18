@@ -112,7 +112,10 @@ public class PlayerInteraction : MonoBehaviour
 
     // This will disable the dialogue box
     public void CloseDialogueBox(){
+        LockCursor();
         dialogueBox.SetActive(false);
-        DialogueManager.activeManager.anim?.SetBool("TalkingToPlayer", false); // Stop talking to the player
+        if(DialogueManager.activeManager.anim != null){
+            DialogueManager.activeManager.anim.SetBool("TalkingToPlayer", false); // Stop talking to the player
+        }
     }
 }
