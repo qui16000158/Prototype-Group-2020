@@ -27,19 +27,24 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     Conversation conversation; // A container holding each dialogue in the current conversation
+    public Animator anim; // The animator for this NPC
 
     Dialogue currentDialogue; // The current dialogue
-    Queue<Dialogue> dialogueQueue = new Queue<Dialogue>();
+    Queue<Dialogue> dialogueQueue;
 
     // This will load the conversation queue (If valid)
     public void Initialize(){
         // Ensure the conversation is valid
         if(conversation != null){
             dialogueQueue = new Queue<Dialogue>(); // Reset the dialogue queue
-
             // Loop through the conversation
             for(int i = 0;i<conversation.allDialogue.Length;i+=1){
                 dialogueQueue.Enqueue(conversation.allDialogue[i]); // Add the current dialogue to the queue of dialogue
+            }
+
+            // Check if the NPC has a valid animator
+            if(anim != null){
+                anim.SetBool("TalkingToPlayer", true); // Set the NPC as talking to the player
             }
         }
     }

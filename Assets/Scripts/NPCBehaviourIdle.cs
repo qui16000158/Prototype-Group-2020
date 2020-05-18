@@ -12,8 +12,8 @@ public class NPCBehaviourIdle : NPCBehaviourBase
 
     // Runs every frame
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
-        // Ensure the NPC isn't waiting
-        if(!animator.GetBool("IsWaiting")){
+        // Ensure the NPC isn't waiting (Ensure agent is enabled)
+        if(!animator.GetBool("IsWaiting") && npc.agent.enabled){
             // Direct the NPC towards the next waypoint
             npc.agent.SetDestination(npc.waypoints[currentWaypoint].position);
             

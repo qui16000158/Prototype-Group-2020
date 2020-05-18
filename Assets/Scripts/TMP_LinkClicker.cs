@@ -13,12 +13,12 @@ using TMPro;
 public class TMP_LinkClicker : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
-    DialogueManager manager; // The dialogue manager for this gameobject
-    [SerializeField]
     TMP_Text linkText; // The text that contains our clickable links
 
     // Runs when clicked
     public void OnPointerClick(PointerEventData data){
+        DialogueManager manager = DialogueManager.activeManager; // Cache active dialogue manager
+
         // Try to grab the index of the clicked link (-1 if none were clicked)
         int index = TMP_TextUtilities.FindIntersectingLink(linkText,data.position,null);
         // Check to ensure a link was clicked
@@ -27,7 +27,7 @@ public class TMP_LinkClicker : MonoBehaviour, IPointerClickHandler
         }
         // If a link was not clicked
         else{
-            manager.LoadNextDialogue(); // Load the next dialogue
+            manager?.LoadNextDialogue(); // Load the next dialogue
         }
     }
 }

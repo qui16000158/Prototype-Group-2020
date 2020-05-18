@@ -80,4 +80,10 @@ public class PlayerInteraction : MonoBehaviour
     public void UnlockCursor(){
         CursorManager.instance.Add("Player Interaction"); // Add to list of cursor unlockers
     }
+
+    // This will disable the dialogue box
+    public void CloseDialogueBox(){
+        dialogueBox.SetActive(false);
+        DialogueManager.activeManager.anim?.SetBool("TalkingToPlayer", false); // Stop talking to the player
+    }
 }

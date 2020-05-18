@@ -13,6 +13,7 @@ public class NPC_PassThrough : MonoBehaviour
 
     public NavMeshAgent agent; // The NPC's nav mesh agent
     public Transform player; // The player's transform
+    public Health playerHealth; // The player's health
     public float waitTime = 0.0f; // How long this NPC will wait at waypoints
     [SerializeField]
     bool isHostile; // Whether this NPC is hostile toward the player
