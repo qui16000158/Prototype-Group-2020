@@ -38,6 +38,19 @@ public class Quest{
 
         CheckCompleted(); // Check if the quest has been completed
     }
+
+    // Override default equals operator
+    public override bool Equals(System.Object other){
+        // return false if other is not valid
+        if(other == null){
+            return false;
+        }
+
+        Quest otherQuest = other as Quest; // Cast other to a quest type
+
+        // Return whether the other object's quest type is equal to this object's quest type
+        return otherQuest.questName == this.questName;
+    }
 }
 
 // James Quinney - QUI16000158
