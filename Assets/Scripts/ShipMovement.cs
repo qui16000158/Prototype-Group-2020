@@ -33,6 +33,9 @@ public class ShipMovement : MonoBehaviour
             Time.deltaTime
         );
 
-        transform.Rotate(new Vector3(-vertical, 0f, horizontal)); // Apply rotation
+        // Generate yaw using Q and E
+        float yaw = (Input.GetKey(KeyCode.Q) ? -1f : 0f) + (Input.GetKey(KeyCode.E) ? 1f : 0f);
+
+        transform.Rotate(new Vector3(-vertical, yaw * turnSpeed * Time.deltaTime, horizontal)); // Apply rotation
     }
 }

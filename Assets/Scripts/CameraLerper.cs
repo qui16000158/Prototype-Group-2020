@@ -14,8 +14,8 @@ public class CameraLerper : MonoBehaviour
     [SerializeField]
     float moveSpeed = 2.0f; // The speed the camera moves
 
-    // Update is called once per frame
-    void Update()
+    // Fixed Update is called once per physics frame
+    void FixedUpdate()
     {
         // Move the camera towards the anchor's position using the move speed (adjusted for frame time)
         transform.position = Vector3.Slerp(transform.position, anchor.position, moveSpeed * Time.deltaTime);
