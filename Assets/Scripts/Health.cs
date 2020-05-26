@@ -62,8 +62,12 @@ public class Health : MonoBehaviour
     // This will heal the player
     public void HealPlayer(float healAmount){
         // Set the player's new health, with the maximum being determined by stats
-        amount = Mathf.Min(amount + healAmount, 
-            max);
+        amount = Mathf.Min(amount + healAmount, max);
+
+        // If it exists, update the health bar
+        if(healthBar != null){
+            healthBar.fillAmount = amount / max;
+        }
 
         onHeal.Invoke(); // Invoke on heal events
     }

@@ -14,6 +14,7 @@ public class NPCBehaviourIdle : NPCBehaviourBase
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         // Ensure the NPC isn't waiting (Ensure agent is enabled)
         if(!animator.GetBool("IsWaiting") && npc.agent.enabled){
+            if(npc.waypoints.Length == 0) return;
             // Direct the NPC towards the next waypoint
             npc.agent.SetDestination(npc.waypoints[currentWaypoint].position);
             

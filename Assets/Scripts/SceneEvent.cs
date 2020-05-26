@@ -6,10 +6,10 @@ using UnityEngine.Events;
 // QUI16000158 - James Quinney
 // This script holds data for events
 // which can be linked to quests
-public class DialogueEvent : MonoBehaviour
+public class SceneEvent : MonoBehaviour
 {
     [SerializeField]
-    UnityEvent sceneEvent; // This event will run if the required quest is completed
+    UnityEvent succeedEvent; // This event will run if the required quest is completed
     [SerializeField]
     UnityEvent failEvent; // This event will run if the required quest is not completed
     [SerializeField]
@@ -43,7 +43,7 @@ public class DialogueEvent : MonoBehaviour
     public void RunEvent(){
         // Check if there is no required quest, or if it is completed
         if(requiredQuest == "" || Quests.IsCompleted(requiredQuest)){
-            sceneEvent.Invoke(); // Invoke the scene events
+            succeedEvent.Invoke(); // Invoke the scene events
         }
         // This runs if the required quest is not completed
         else{
