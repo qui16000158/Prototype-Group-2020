@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // James Quinney (QUI16000158)
 // This is the player's movement script
@@ -28,6 +29,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     Transform groundChecker; // The ground checker's transform
 
+    [SerializeField]
+    Image staminaBar; // The player's stamina bar
+    [SerializeField]
+    float staminaDepletionRate = 1f; // The rate in which the player's stamina decreases
+
+    float stamina; // The player's stamina
+    float maxStamina; // The player's max stamina
+    bool staminaReplenish; // Whether the player needs to replenish stamina before running again
+
     // This will disable both the running and walking booleans
     void SetIdle(){
         anim.SetBool("IsWalking", false);
@@ -46,6 +56,18 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("IsWalking", false);
     }
 
+    // Runs before first frame update
+    void Start(){
+        UpdateMaxStamina(); // Update the player's max stamina
+
+        stamina = maxStamina; // Set the player's stamina to max
+    }
+
+    // This will update the player's max stamina
+    public void UpdateMaxStamina(){
+        maxStamina = PlayerStats.StaminaAmount;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -56,6 +78,40 @@ public class PlayerMovement : MonoBehaviour
 
         // Set the speed multiplier to run speed if button is held, otherwise just regular speed
         float speedMultiplier = Input.GetButton("Speed") ? speed * runSpeedMultiplier : speed;
+
+        // Check if the player's stamina needs to replenish
+        if(staminaReplenish){
+            // Check if the player has recovered 25% of their stamina
+            if(stamina > maxStamina/4f){
+                staminaReplenish = false; // Allow the player to run again
+                staminaBar.color = Color.green; // Set the stamin bar to green
+            }
+        }
+        // Check if player is running
+        else if(speed != speedMultiplier){
+            // Deplete the player's stamina with a minumum of 0
+            stamina = Mathf.Max(0f, stamina - Time.deltaTime * staminaDepletionRate);
+            PlayerStatEvents.instance.AddStaminaXP(Time.deltaTime); // Increate player stamina by 1 every second of running
+        }
+
+        // Check if the player is running
+        if(speed != speedMultiplier){
+            // Check if the player has no stamina left
+            if(stamina <= 0){
+                staminaReplenish = true; // Stop the player from running
+                staminaBar.color = Color.red; // Set the stamina bar to red
+            }
+        }
+        // If the player is not running
+        else{
+            // Increase stamina by depletion rate with a max of the max stamina
+            stamina = Mathf.Min(maxStamina, stamina + Time.deltaTime * staminaDepletionRate);
+        }
+
+        // Check if the player needs to replenish stamina
+        if(staminaReplenish){
+            speedMultiplier = speed; // Remove any speed boosts from running
+        }
 
         // The player's horizontal/vertical axes
         float horizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
@@ -76,6 +132,8 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else{
                     SetRunning(); // Set the player's running animation
+
+
                 }
             }
             else{
@@ -96,5 +154,7 @@ public class PlayerMovement : MonoBehaviour
             transform.right * horizontal
         ).normalized * speedMultiplier + Vector3.up * yVel;
         // Normalizing the left/right vector allows us to avoid diagonal being faster
+
+        staminaBar.fillAmount = stamina/maxStamina; // Update stamina bar
     }
 }

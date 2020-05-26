@@ -16,6 +16,15 @@ public class PData
     public List<Quest> ongoingQuests = new List<Quest>();
     public List<string> completedQuests = new List<string>();
 
+    // Data that allows us to interface with the stat system across save games
+    public float LevelXP{get;set;}
+    public float HealthXP{get;set;}
+    public float StrengthXP{get;set;}
+    public float StaminaXP{get;set;}
+
+    // Data that allows us to interface with the inventory system across save games
+    public List<Item> inventory = new List<Item>();
+
     public void Save(string dataPath){
         // Create a new file in the save directory
         using(FileStream fs = new FileStream(dataPath, FileMode.Create)){

@@ -10,4 +10,6 @@ public class Weapon : ScriptableObject
     public float delay = 1f;
     public float attackRadius = 1f;
     public float range = 2f;
+    public int attackAnimation = 0;
+    public GameObject weaponPrefab; // The prefab to instantiate when dropping/placed in hand
 }

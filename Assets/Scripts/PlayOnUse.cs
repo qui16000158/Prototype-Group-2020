@@ -17,4 +17,14 @@ public class PlayOnUse : MonoBehaviour
     public void Use(){
         onUse.Invoke(); // Invoke the on use event
     }
+
+    // Will destroy itself
+    public void DestroySelf(){
+        Destroy(gameObject);
+    }
+
+    // This will add an item to the player's inventory
+    public void AddToInventory(ItemInfo toAdd){
+        Inventory.instance.Add(toAdd); // Add the item to the inventory
+    }
 }

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   weaponName: Sword
+  damage: 20
   delay: 1
   attackRadius: 0.2
   range: 1.5
+  attackAnimation: 0
+  weaponPrefab: {fileID: 2930292250824015929, guid: ebe3f847a69125d439d33516aca951a1,
+    type: 3}
