@@ -45,6 +45,8 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(CursorManager.instance.cursorLockers.Count > 0){return;} // Do not run code if mouse is unlocked
+
         // Ensure the player has a weapon and is able to attack
         if(weapon != null && Time.time > nextAttack){
             // Check if the player has pressed the attack button
