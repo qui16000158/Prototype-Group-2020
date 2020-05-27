@@ -23,7 +23,7 @@ public class PlayerLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialogueBox.activeSelf){return;} // Do not run look code if dialogue box is active
+        if(CursorManager.instance.cursorLockers.Count > 0){return;} // Do not run code if mouse is unlocked
 
         // Store the horizontal and vertical looking angles
         float horizontal = Input.GetAxisRaw("Mouse X");

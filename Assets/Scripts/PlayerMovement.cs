@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialogueBox.activeSelf){return;} // Do not run the method if dialogue box is active
+        if(CursorManager.instance.cursorLockers.Count > 0){return;} // Do not run the code is cursor is unlocked
 
         // Our speed values are multiplied by Time.deltaTime which will equate to 1 every 1 second
         // This will help us to avoid speed being dependent on framerate

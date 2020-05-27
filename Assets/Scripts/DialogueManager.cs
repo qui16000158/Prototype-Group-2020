@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
     // This will return the click event for the current dialogue
     public UnityEvent LinkEvent(int index){
         // Check if there is a current dialogue
-        if(currentDialogue != null){
+        if(currentDialogue != null && currentDialogue.clickEvent.Length > index){
             return currentDialogue.clickEvent[index];
         }
         else{

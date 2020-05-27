@@ -27,15 +27,16 @@ public class Hints : MonoBehaviour
     }
 
     public void DisplayHint(string hint){
-        _hintAnimator.Play("Empty"); // Cancel current state
-        _hintAnimator.Play("Hint Fade"); // Play the hint fade state
-        _hintText.text = hint; // Set the hint's text
+        _DisplayHint(hint); // Access the static version of this method
     }
 
     // It displays a hint, but from any class
     public static void _DisplayHint(string hint){
-        _hintAnimator.Play("Empty"); // Cancel current state
-        _hintAnimator.Play("Hint Fade"); // Play the hint fade state
+        // Check if a hint is currently being displayed
+        if(!_hintAnimator.GetCurrentAnimatorStateInfo(0).IsName("Empty")){
+            _hintAnimator.Play("Empty"); // Quickly escape the state
+        }
+        _hintAnimator.SetTrigger("DisplayHint"); // Play the hint fade state
         _hintText.text = hint; // Set the hint's text
     }
 }

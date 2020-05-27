@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3233867f476c4ab62f898dfde233b, type: 3}
+  m_Name: Talk1
+  m_EditorClassIdentifier: 
+  allDialogue:
+  - dialogueInput: '[Are you the mechanic]?'
+    clickEvent: []
+  - dialogueInput: That's me, how can I help you?
+    clickEvent: []
+  - dialogueInput: '[My ship crashed just outside the village]'
+    clickEvent: []
+  - dialogueInput: '[I was hoping you could take a look at it]?'
+    clickEvent: []
+  - dialogueInput: I could take a look for you, I'll need your help with something
+      first
+    clickEvent: []
+  - dialogueInput: So, the village is currently suffering a pest problem
+    clickEvent: []
+  - dialogueInput: If you can kill 5 of those pests, I'll fix your ship for you
+    clickEvent: []
+  onDialogueEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: InvokeSceneEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close Dialogue Box
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000}
+        m_MethodName: InvokeSceneEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Mechanic Kill Quest
+          m_BoolArgument: 0
+        m_CallState: 2

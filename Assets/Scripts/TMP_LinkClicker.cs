@@ -22,7 +22,7 @@ public class TMP_LinkClicker : MonoBehaviour, IPointerClickHandler
         // Try to grab the index of the clicked link (-1 if none were clicked)
         int index = TMP_TextUtilities.FindIntersectingLink(linkText,data.position,null);
         // Check to ensure a link was clicked
-        if(index != -1){
+        if(index != -1 && manager?.LinkEvent(index) != null){
             manager?.LinkEvent(index).Invoke(); // Invoke the on click event for that index
         }
         // If a link was not clicked
