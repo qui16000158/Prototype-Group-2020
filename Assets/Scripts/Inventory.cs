@@ -11,19 +11,30 @@ using UnityEngine.Events;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
+    ItemInfo[] itemTypes; // Each item type in the game
+    public static Dictionary<string, ItemInfo> dictItemTypes; // Each item in the game, with their name as the key
+
+    [SerializeField]
     Transform player;
     // The player's inventory items
     public static List<Item> items = new List<Item>();
     public static Inventory instance;
 
     // Runs before first frame update
-    void Start(){
+    void Awake(){
         instance = this;
+
+        dictItemTypes = new Dictionary<string, ItemInfo>(); // Initialize the dictionary
+
+        // Loop through each item type
+        foreach(ItemInfo item in itemTypes){
+            dictItemTypes[item.itemName] = item; // Store the item in the dictionary
+        }
     }
 
     // Adds an item to the inventory
     public void Add(ItemInfo toAdd){
-        items.Add(new Item{info = toAdd}); // Add a copy of the item to the player's inventory
+        items.Add(new Item{Info = toAdd.itemName}); // Add a copy of the item to the player's inventory
         Hints._DisplayHint(toAdd.itemName + " added to inventory.");
     }
 

@@ -36,5 +36,10 @@ public class ItemInfo : ScriptableObject
 // An individual item (added to the player's inventory)
 [System.Serializable]
 public class Item{
-    public ItemInfo info; // The info for this item
+    public string Info; // The info for this item
+    public ItemInfo info{
+        get{
+            return Inventory.dictItemTypes[Info]; // Return the stored item type for this item
+        }
+    }
 }

@@ -2569,7 +2569,6 @@ GameObject:
   m_Component:
   - component: {fileID: 461694222}
   - component: {fileID: 461694224}
-  - component: {fileID: 461694223}
   m_Layer: 0
   m_Name: Startup Manager
   m_TagString: Untagged
@@ -2594,32 +2593,6 @@ Transform:
   m_Father: {fileID: 1151849214}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &461694223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461694221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54f19d4ade671040967b7c8ebcc4af8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onAwake:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 461694224}
-        m_MethodName: RunEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &461694224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3992,6 +3965,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 461694224}
+        m_MethodName: RunEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &703251277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,6 +5200,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d75f5cfc3cea499d19f41c57625fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemTypes:
+  - {fileID: 11400000, guid: 797db352c029b8c4bb19f84ad10da651, type: 2}
+  - {fileID: 11400000, guid: 44bed9ebc9d3c4640bab3e61c359cbfa, type: 2}
+  - {fileID: 11400000, guid: 210fb03e40d6423438fe7e4fa0bcacb7, type: 2}
+  - {fileID: 11400000, guid: 4248c097c4b2ba046af3bd62374ab3c8, type: 2}
   player: {fileID: 1411050735}
 --- !u!4 &977996487
 Transform:
