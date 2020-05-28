@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Space.unity
     guid: b56d41b80baccdc49801cc5c8e8881f2
+  - enabled: 1
+    path: Assets/Scenes/Commander Talk.unity
+    guid: cd71114c8b8275b44bb6091975c5ceb1
   m_configObjects: {}

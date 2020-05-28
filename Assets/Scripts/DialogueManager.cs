@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 [System.Serializable]
 public class Dialogue{
@@ -24,6 +25,8 @@ public class DialogueManager : MonoBehaviour
     TMP_LinkClicker clicker;
     [SerializeField]
     TMP_DialogueReplacer replacer;
+    [SerializeField]
+    TMP_Text nameText; // The npc name text (Not required for talking via the Use key)
 
     [SerializeField]
     Conversation conversation; // A container holding each dialogue in the current conversation
@@ -47,6 +50,11 @@ public class DialogueManager : MonoBehaviour
                 anim.SetBool("TalkingToPlayer", true); // Set the NPC as talking to the player
             }
         }
+    }
+
+    // Sets the name of the currently talking to NPC
+    public void SetNPCName(string toSet){
+        nameText.text = toSet; // Set the name text
     }
 
     // This method will load a new conversation

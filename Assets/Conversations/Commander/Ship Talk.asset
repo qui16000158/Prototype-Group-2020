@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3233867f476c4ab62f898dfde233b, type: 3}
+  m_Name: Ship Talk
+  m_EditorClassIdentifier: 
+  allDialogue:
+  - dialogueInput: We lost contact with you back there, soldier. What the hell happened?
+    clickEvent: []
+  - dialogueInput: '[I had a collision and crash landed]'
+    clickEvent: []
+  - dialogueInput: "As long as you\u2019re well the mission can continue. Based on
+      your position planet 2 should be right up ahead. Check in with me once you
+      land."
+    clickEvent: []
+  - dialogueInput: '[Yes commander]'
+    clickEvent: []
+  onDialogueEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: InvokeSceneEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Quest Completor
+          m_BoolArgument: 0
+        m_CallState: 2
