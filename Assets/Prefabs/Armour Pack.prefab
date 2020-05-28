@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4842234713471923214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 672610830113140091, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: onUse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b57b1196b87f8f4fab166b14dae7b9d,
+        type: 2}
+    - target: {fileID: 672610830113140091, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: useText
+      value: Press e to pick up armour
+      objectReference: {fileID: 0}
+    - target: {fileID: 870889501321665560, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bd33ebcb29ad404c94b352872a6233d, type: 2}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.76471
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.36281762
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -85.172325
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725266616482640892, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183934650093810800, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bd33ebcb29ad404c94b352872a6233d, type: 2}
+    - target: {fileID: 7044282163483129330, guid: ad71c0c8294943b449f794d7b5261530,
+        type: 3}
+      propertyPath: m_Name
+      value: Armour Pack
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad71c0c8294943b449f794d7b5261530, type: 3}

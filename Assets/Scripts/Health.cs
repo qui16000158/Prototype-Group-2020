@@ -15,7 +15,11 @@ public class Health : MonoBehaviour
     [SerializeField]
     float amount; // The amount of health
     [SerializeField]
+    float armour; // The amount of armour
+    [SerializeField]
     Image healthBar; // The health bar (if any)
+    [SerializeField]
+    Image armourBar; // The armour bar (if any)
     [SerializeField]
     UnityEvent onDeath; // The event to run on death
     [SerializeField]
@@ -44,11 +48,20 @@ public class Health : MonoBehaviour
     
     // This will damage the object
     public void TakeDamage(float damageAmount){
+        float armourCache = armour;
+        armour = Mathf.Max(armour - damageAmount, 0f); // Reduce armour by damage amount (min 0 total armour)
+        damageAmount = Mathf.Max(damageAmount - armourCache, 0f); // Reduce damage amount by the armour (min 0 damage)
+
         amount = Mathf.Max(amount - damageAmount, 0f); // Reduce health by damage amount (min 0 total health)
 
         // If it exists, update the health bar
         if(healthBar != null){
             healthBar.fillAmount = amount / max;
+        }
+
+        // If it exists, update the armour bar
+        if(armourBar != null){
+            armourBar.fillAmount = armour / max;
         }
 
         onTakeDamage.Invoke(); // Invoke take damage event
@@ -70,6 +83,17 @@ public class Health : MonoBehaviour
         }
 
         onHeal.Invoke(); // Invoke on heal events
+    }
+
+    // This will add armour
+    public void AddArmour(float addAmount){
+        // Set the new armour amount, with the maximum being determined by max health
+        armour = Mathf.Min(armour + addAmount, max);
+
+        // If it exists, update the armour bar
+        if(armourBar != null){
+            armourBar.fillAmount = armour / max;
+        }
     }
 
     // This will allow enemies to destroy themselves when killed
