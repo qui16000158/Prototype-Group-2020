@@ -557,6 +557,7 @@ Transform:
   - {fileID: 286167645}
   - {fileID: 1441904187}
   - {fileID: 196355858}
+  - {fileID: 347765828}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -680,6 +681,103 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &347765827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347765828}
+  - component: {fileID: 347765830}
+  - component: {fileID: 347765829}
+  m_Layer: 0
+  m_Name: Land On Planet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &347765828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347765827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 213924296}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &347765829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347765827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171807d8fa320c247930717e5a383c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347765830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347765827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721bb3a1f55115844900499d4efe384e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  succeedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 347765830}
+        m_MethodName: CompleteQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Spoken To Commander
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 850412540}
+        m_MethodName: Save
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 347765829}
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: City
+          m_BoolArgument: 0
+        m_CallState: 2
+  failEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  linkedQuest: 
+  requiredQuest: 
 --- !u!1 &432652859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,6 +1696,7 @@ GameObject:
   - component: {fileID: 1441904187}
   - component: {fileID: 1441904189}
   - component: {fileID: 1441904188}
+  - component: {fileID: 1441904190}
   m_Layer: 0
   m_Name: Commander Talk
   m_TagString: Untagged
@@ -1656,18 +1755,6 @@ MonoBehaviour:
           m_StringArgument: Commander
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1441904189}
-        m_MethodName: LoadNextConversation
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 7879f56d385fa7641a66186eb3f74ec9,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: Conversation, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Commander
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1221754270}
         m_MethodName: Add
         m_Mode: 5
@@ -1677,6 +1764,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Talk To Commander
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441904190}
+        m_MethodName: RunEvents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   lateStart: 1
@@ -1697,6 +1795,50 @@ MonoBehaviour:
   nameText: {fileID: 1850301858}
   conversation: {fileID: 11400000, guid: 7879f56d385fa7641a66186eb3f74ec9, type: 2}
   anim: {fileID: 0}
+--- !u!114 &1441904190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441904186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d199887bf0f2e34b9dfe18999b50a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questEvents:
+  - questName: Commander Talk
+    runIfCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1441904189}
+          m_MethodName: LoadNextConversation
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 89e2b4fcadab5c348b9dd7539bd7ffdc,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: Conversation, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  runOnFailed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1441904189}
+        m_MethodName: LoadNextConversation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7879f56d385fa7641a66186eb3f74ec9,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Conversation, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1643817293
 GameObject:
   m_ObjectHideFlags: 0

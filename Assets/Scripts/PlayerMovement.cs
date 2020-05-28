@@ -155,6 +155,8 @@ public class PlayerMovement : MonoBehaviour
         ).normalized * speedMultiplier + Vector3.up * yVel;
         // Normalizing the left/right vector allows us to avoid diagonal being faster
 
-        staminaBar.fillAmount = stamina/maxStamina; // Update stamina bar
+        if(staminaBar != null){
+            staminaBar.fillAmount = stamina/maxStamina; // Update stamina bar
+        }
     }
 }

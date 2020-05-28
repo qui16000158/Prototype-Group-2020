@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3233867f476c4ab62f898dfde233b, type: 3}
+  m_Name: FirstMeet
+  m_EditorClassIdentifier: 
+  allDialogue:
+  - dialogueInput: Who are you? How did you get in here?
+    clickEvent: []
+  - dialogueInput: '[We need your help]'
+    clickEvent: []
+  - dialogueInput: "You\u2019re with the alliance? Sorry, I can\u2019t help you."
+    clickEvent: []
+  - dialogueInput: '[Please look at all the support we have]'
+    clickEvent: []
+  - dialogueInput: You gained that many new recruits?
+    clickEvent: []
+  - dialogueInput: In my city?
+    clickEvent: []
+  - dialogueInput: I suppose it is my duty to support the people.
+    clickEvent: []
+  - dialogueInput: "I can\u2019t do much to help, but I can give you this document
+      which will grant you access to all areas of the city."
+    clickEvent: []
+  - dialogueInput: Guards will no longer be able to stop you. Please keep my people
+      safe, soldier.
+    clickEvent: []
+  onDialogueEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: InvokeSceneEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Finish Talking
+          m_BoolArgument: 0
+        m_CallState: 2

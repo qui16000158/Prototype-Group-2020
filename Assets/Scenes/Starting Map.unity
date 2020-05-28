@@ -2239,6 +2239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clicker: {fileID: 878807475}
   replacer: {fileID: 878807474}
+  nameText: {fileID: 0}
   conversation: {fileID: 0}
   anim: {fileID: 0}
 --- !u!114 &333709807
@@ -8226,6 +8227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clicker: {fileID: 878807475}
   replacer: {fileID: 878807474}
+  nameText: {fileID: 0}
   conversation: {fileID: 0}
   anim: {fileID: 0}
 --- !u!4 &1249081712 stripped
