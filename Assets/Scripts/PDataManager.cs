@@ -7,6 +7,10 @@ using UnityEngine;
 // and decides exactly what to do with it
 public class PDataManager : MonoBehaviour
 {
+    // The player's health and armour (Loaded from here later on)
+    public static float playerHealth;
+    public static float playerArmour;
+    
     // This is the path files are stored in
     static string DataPath{
         get{
@@ -28,6 +32,9 @@ public class PDataManager : MonoBehaviour
         PlayerStats.StrengthXP = currentData.StrengthXP;
 
         Inventory.items = currentData.inventory;
+
+        playerHealth = currentData.playerHealth;
+        playerArmour = currentData.playerArmour;
     }
 
     // This will save game data to pdata, and then save the pdata
@@ -44,6 +51,9 @@ public class PDataManager : MonoBehaviour
         currentData.StrengthXP = PlayerStats.StrengthXP;
 
         currentData.inventory = Inventory.items;
+
+        currentData.playerHealth = Health.player.amount;
+        currentData.playerArmour = Health.player.armour;
 
         currentData.Save(DataPath+slot); // Save pdata to disk
     }

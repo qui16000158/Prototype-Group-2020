@@ -11,11 +11,11 @@ using UnityEngine.Events;
 // death using a Unity Event
 public class Health : MonoBehaviour
 {
+    public static Health player; // The player's health instance
+
     public float max; // The maximum amount of health
-    [SerializeField]
-    float amount; // The amount of health
-    [SerializeField]
-    float armour; // The amount of armour
+    public float amount; // The amount of health
+    public float armour; // The amount of armour
     [SerializeField]
     Image healthBar; // The health bar (if any)
     [SerializeField]
@@ -27,11 +27,27 @@ public class Health : MonoBehaviour
     [SerializeField]
     UnityEvent onHeal; // The event to run on heal
 
+    // Runs before start
+    void Awake(){
+        // Store the player's health instance
+        if(tag == "Player"){
+            player = this;
+        }
+    }
+
     // Runs before first frame update
     void Start(){
         UpdateMaxHealth(); // Update the player's max health (If attached to the player)
 
         amount = max; // Set health to maximum
+
+        if(tag == "Player"){
+            // Load player's health and armour
+            amount = PDataManager.playerHealth;
+            armour = PDataManager.playerArmour;
+
+            UpdateUI(); // Update the UI
+        }
     }
 
     // This will update the player's maximum health
@@ -45,15 +61,9 @@ public class Health : MonoBehaviour
     public float Get(){
         return amount; // Return the player's health
     }
-    
-    // This will damage the object
-    public void TakeDamage(float damageAmount){
-        float armourCache = armour;
-        armour = Mathf.Max(armour - damageAmount, 0f); // Reduce armour by damage amount (min 0 total armour)
-        damageAmount = Mathf.Max(damageAmount - armourCache, 0f); // Reduce damage amount by the armour (min 0 damage)
 
-        amount = Mathf.Max(amount - damageAmount, 0f); // Reduce health by damage amount (min 0 total health)
-
+    // This will update the UI
+    public void UpdateUI(){
         // If it exists, update the health bar
         if(healthBar != null){
             healthBar.fillAmount = amount / max;
@@ -63,6 +73,17 @@ public class Health : MonoBehaviour
         if(armourBar != null){
             armourBar.fillAmount = armour / max;
         }
+    }
+    
+    // This will damage the object
+    public void TakeDamage(float damageAmount){
+        float armourCache = armour;
+        armour = Mathf.Max(armour - damageAmount, 0f); // Reduce armour by damage amount (min 0 total armour)
+        damageAmount = Mathf.Max(damageAmount - armourCache, 0f); // Reduce damage amount by the armour (min 0 damage)
+
+        amount = Mathf.Max(amount - damageAmount, 0f); // Reduce health by damage amount (min 0 total health)
+
+        UpdateUI(); // Update the UI
 
         onTakeDamage.Invoke(); // Invoke take damage event
 
@@ -77,10 +98,7 @@ public class Health : MonoBehaviour
         // Set the player's new health, with the maximum being determined by stats
         amount = Mathf.Min(amount + healAmount, max);
 
-        // If it exists, update the health bar
-        if(healthBar != null){
-            healthBar.fillAmount = amount / max;
-        }
+        UpdateUI(); // Update the UI
 
         onHeal.Invoke(); // Invoke on heal events
     }
@@ -90,10 +108,7 @@ public class Health : MonoBehaviour
         // Set the new armour amount, with the maximum being determined by max health
         armour = Mathf.Min(armour + addAmount, max);
 
-        // If it exists, update the armour bar
-        if(armourBar != null){
-            armourBar.fillAmount = armour / max;
-        }
+        UpdateUI(); // Update the UI
     }
 
     // This will allow enemies to destroy themselves when killed

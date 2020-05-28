@@ -26,6 +26,11 @@ public class SceneEvent : MonoBehaviour
         }
     }
 
+    // Mark a quest as completed instantly
+    public void CompleteQuest(string questName){
+        Quests.CompleteFlag(questName); // Instantly complete the quest
+    }
+
     // Start the quest attached to this game object
     public void StartQuest(){
         Quest attachedQuest = GetComponent<QuestInfo>().quest; // Grab the quest from this game object

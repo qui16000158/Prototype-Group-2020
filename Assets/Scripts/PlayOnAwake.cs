@@ -10,9 +10,17 @@ public class PlayOnAwake : MonoBehaviour
 {
     [SerializeField]
     UnityEvent onAwake; // The event to invoke on awake
+    [SerializeField]
+    bool lateStart; // Only run on start
 
     // Runs when this object is enabled
     void OnEnable(){
+        if(lateStart) return; // Don't run here, if late start is enabled
+        onAwake.Invoke(); // Invoke the event
+    }
+
+    void Start(){
+        if(!lateStart) return; // Only run here if late start is enabled
         onAwake.Invoke(); // Invoke the event
     }
 }

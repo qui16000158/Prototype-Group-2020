@@ -84,6 +84,14 @@ public static class Quests
         return null; // Return null if no quest was found
     }
 
+    // This will instantly mark a quest as completed
+    public static void CompleteFlag(string questName){
+        // Check if the quest has not already been completed
+        if(!completedQuests.Contains(questName)){
+            completedQuests.Add(questName); // Mark the quest as completed
+        }
+    }
+
     // This method will return whether a quest has been completed by name
     public static bool IsCompleted(string questName){
         return completedQuests.Contains(questName); // Return whether the name exists within the completed quests list

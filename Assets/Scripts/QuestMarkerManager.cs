@@ -17,7 +17,10 @@ public class QuestMarkerManager : MonoBehaviour
     // Awake is called before the only start update 
     void Awake()
     {
-        markers = new Dictionary<string, QuestMarker>(); // Initialize marker dictionary
+        // Check if the marker dictionary has not yet initialized
+        if(markers == null){
+            markers = new Dictionary<string, QuestMarker>(); // Initialize marker dictionary
+        }
         instance = this;
     }
 
@@ -33,6 +36,11 @@ public class QuestMarkerManager : MonoBehaviour
 
     // Add a quest marker
     public void Add(string markerName, Transform markerObject){
+        // Check if the marker dictionary has not yet initialized
+        if(markers == null){
+            markers = new Dictionary<string, QuestMarker>(); // Initialize marker dictionary
+        }
+
         // Ensure the marker is not already in the scene
         if(!markers.ContainsKey(markerName)){
             // Create the quest marker

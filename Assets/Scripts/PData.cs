@@ -22,6 +22,10 @@ public class PData
     public float StrengthXP{get;set;}
     public float StaminaXP{get;set;}
 
+    // Data that allows us to interface with the stat system across save games
+    public float playerHealth = 100f;
+    public float playerArmour = 0f;
+
     // Data that allows us to interface with the inventory system across save games
     public List<Item> inventory = new List<Item>();
 
