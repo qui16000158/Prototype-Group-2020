@@ -5241,6 +5241,7 @@ MonoBehaviour:
           m_StringArgument: Starting Map
           m_BoolArgument: 0
         m_CallState: 2
+  lateStart: 0
 --- !u!114 &918038289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5268,10 +5269,11 @@ AudioSource:
   m_GameObject: {fileID: 1074357904}
   m_Enabled: 0
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e752b0d6db80d6b47a03e99da8ab95bc,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 094ae409ed6ed8347bd25fb992eac5bc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5390,7 +5392,8 @@ AudioSource:
   m_GameObject: {fileID: 1340711884}
   m_Enabled: 0
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e752b0d6db80d6b47a03e99da8ab95bc,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 91d01284cf2b33b4da019e8024405431, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5678,6 +5681,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  lateStart: 0
 --- !u!114 &1837783041
 MonoBehaviour:
   m_ObjectHideFlags: 0

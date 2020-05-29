@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Government Building.unity
     guid: c7602c2338be5374db151493b6c65263
+  - enabled: 1
+    path: Assets/Scenes/Mountains.unity
+    guid: 80dc310ab0df8dc4aaedbfa279ca248e
   m_configObjects: {}
