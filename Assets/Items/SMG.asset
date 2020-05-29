@@ -12,9 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de3be784ac4cc499ef9b26574eda16, type: 3}
   m_Name: SMG
   m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
-  itemName: 
-  prefab: {fileID: 0}
-  droppable: 0
+  itemName: SMG
+  prefab: {fileID: 5105413034441665084, guid: 2ce38ffce8304ee41963aa402997bc9f, type: 3}
+  droppable: 1
   onUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: EquipWeapon
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7924b4fe484e65145988721a9c4c79f6,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  weapon: {fileID: 11400000, guid: 7924b4fe484e65145988721a9c4c79f6, type: 2}

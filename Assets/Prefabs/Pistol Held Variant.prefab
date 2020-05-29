@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &722247587797944875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7809224
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.61751974
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.038782056
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.08559015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 184.921
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 9.606995
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -77.08499
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.12996586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.12996586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411822863366311638, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.12996586
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025761074512641221, guid: 589f613e00e13b9478762fe65110f952,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistol Held Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1035859757716530639, guid: 589f613e00e13b9478762fe65110f952, type: 3}
+    - {fileID: 1035859757716530638, guid: 589f613e00e13b9478762fe65110f952, type: 3}
+    - {fileID: 1035859757716530608, guid: 589f613e00e13b9478762fe65110f952, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 589f613e00e13b9478762fe65110f952, type: 3}

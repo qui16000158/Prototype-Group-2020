@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3233867f476c4ab62f898dfde233b, type: 3}
+  m_Name: After Get Armour
+  m_EditorClassIdentifier: 
+  allDialogue:
+  - dialogueInput: Is there anything else you need?
+    clickEvent: []
+  - dialogueInput: '[The commander sent me]'
+    clickEvent: []
+  - dialogueInput: "I see, so you\u2019re a member of the alliance, ey? Well, in
+      that case just let me know if there\u2019s anything you need. I am more than
+      happy to help."
+    clickEvent: []
+  - dialogueInput: '[Do you have any stronger weapons]?'
+    clickEvent: []
+  - dialogueInput: My wares are not good enough for you?
+    clickEvent: []
+  - dialogueInput: Haha! Tell you what
+    clickEvent: []
+  - dialogueInput: "If you manage to find these materials and take them to my brother\u2019s
+      forge on the other side of the town, he can make you a powerful weapon of your
+      choice. I\u2019ll let him know you\u2019re coming."
+    clickEvent: []
+  onDialogueEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: InvokeSceneEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close Dialogue Box
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000}
+        m_MethodName: InvokeSceneEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shopkeeper Helped
+          m_BoolArgument: 0
+        m_CallState: 2

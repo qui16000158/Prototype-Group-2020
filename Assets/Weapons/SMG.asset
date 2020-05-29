@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2abaaddc98db4ba931954cb30d05c, type: 3}
+  m_Name: SMG
+  m_EditorClassIdentifier: 
+  weaponName: SMG
+  damage: 30
+  delay: 0.125
+  attackRadius: 0.2
+  range: 15
+  attackAnimation: 1
+  weaponPrefab: {fileID: 3726037388806667646, guid: fb2e26752e287db4da8591b7f1bd5c0a,
+    type: 3}
+  attackSound: {fileID: 8300000, guid: 4f4512f4ea959a245915e9d8cb18d04e, type: 3}

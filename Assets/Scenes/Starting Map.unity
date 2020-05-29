@@ -5501,6 +5501,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 210fb03e40d6423438fe7e4fa0bcacb7, type: 2}
   - {fileID: 11400000, guid: 4248c097c4b2ba046af3bd62374ab3c8, type: 2}
   - {fileID: 11400000, guid: 4b57b1196b87f8f4fab166b14dae7b9d, type: 2}
+  - {fileID: 11400000, guid: 3644b0e8867915e499833bf1129fabcb, type: 2}
   player: {fileID: 1411050735}
 --- !u!4 &977996487
 Transform:

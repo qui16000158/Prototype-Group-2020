@@ -12,9 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de3be784ac4cc499ef9b26574eda16, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
-  itemName: 
-  prefab: {fileID: 0}
-  droppable: 0
+  itemName: Pistol
+  prefab: {fileID: 9025761074512641221, guid: 589f613e00e13b9478762fe65110f952, type: 3}
+  droppable: 1
   onUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: EquipWeapon
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 3dbfb6a82bbc0df47a454e31c80b2b18,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  weapon: {fileID: 11400000, guid: 3dbfb6a82bbc0df47a454e31c80b2b18, type: 2}
