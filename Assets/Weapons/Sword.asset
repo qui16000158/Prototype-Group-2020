@@ -20,3 +20,4 @@ MonoBehaviour:
   attackAnimation: 0
   weaponPrefab: {fileID: 2930292250824015929, guid: ebe3f847a69125d439d33516aca951a1,
     type: 3}
+  attackSound: {fileID: 8300000, guid: 88702e692096a14409d59d1e48cb0199, type: 3}

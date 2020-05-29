@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 // James Quinney - QUI16000158
 // This script will allow the player
@@ -11,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     Animator anim; // The player's animator
     [SerializeField]
     Transform hand; // The player's hand transform
+    [SerializeField]
+    AudioSource audio; // The player's audio source
 
     public Weapon weapon; // The player's current weapon
     public GameObject weaponInstance; // The instance of the weapon's prefab
@@ -54,6 +57,8 @@ public class PlayerAttack : MonoBehaviour
                 nextAttack = Time.time + weapon.delay; // Add the weapon's attack delay to the wait time
                 anim.SetTrigger("DoAttack"); // Do the attack animation
                 anim.SetInteger("AttackType", weapon.attackAnimation); // Set the attack type
+                audio.clip = weapon.attackSound; // Load the attack sound into the audio source
+                audio.Play(); // Play the sound
 
                 RaycastHit hit; // The hit info the for below spherecast
                 if(Physics.SphereCast(transform.position, weapon.attackRadius, transform.forward, out hit, weapon.range)){

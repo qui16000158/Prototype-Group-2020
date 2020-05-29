@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [CreateAssetMenu]
 public class Weapon : ScriptableObject
@@ -12,4 +13,5 @@ public class Weapon : ScriptableObject
     public float range = 2f;
     public int attackAnimation = 0;
     public GameObject weaponPrefab; // The prefab to instantiate when dropping/placed in hand
+    public AudioClip attackSound;
 }
