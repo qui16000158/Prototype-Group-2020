@@ -29,8 +29,8 @@ public class Boss_PlayerShip : MonoBehaviour
     void Update()
     {
         // Store horizontal movement speed
-        float horizontal = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
-        float vertical = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
+        float horizontal = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        float vertical = Input.GetAxisRaw("Vertical") * moveSpeed;
 
         rb.velocity = new Vector3(horizontal, vertical, 0f); // Set the player's velocity
 
