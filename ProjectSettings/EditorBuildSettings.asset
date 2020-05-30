@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mountains.unity
     guid: 80dc310ab0df8dc4aaedbfa279ca248e
+  - enabled: 1
+    path: Assets/Scenes/Final Boss Fight.unity
+    guid: f76e73c40358f7a4fbb21a7eb92b647e
   m_configObjects: {}
