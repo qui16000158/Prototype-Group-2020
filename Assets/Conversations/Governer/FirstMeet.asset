@@ -33,6 +33,10 @@ MonoBehaviour:
   - dialogueInput: Guards will no longer be able to stop you. Please keep my people
       safe, soldier.
     clickEvent: []
+  - dialogueInput: I hear the warlord is hiding out on the third planet
+    clickEvent: []
+  - dialogueInput: Please, stop him
+    clickEvent: []
   onDialogueEnd:
     m_PersistentCalls:
       m_Calls:
