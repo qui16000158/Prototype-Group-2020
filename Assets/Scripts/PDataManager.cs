@@ -56,6 +56,10 @@ public class PDataManager : MonoBehaviour
             currentData.playerHealth = Health.player.amount;
             currentData.playerArmour = Health.player.armour;
         }
+        else{
+            currentData.playerHealth = playerHealth;
+            currentData.playerArmour = playerArmour;
+        }
 
         currentData.Save(DataPath+slot); // Save pdata to disk
     }

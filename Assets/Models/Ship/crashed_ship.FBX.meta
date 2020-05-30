@@ -1,95 +1,9 @@
 fileFormatVersion: 2
-guid: 4f3aeea049706f9469d943a2308db5c0
+guid: 0960fc2bac80b3e42beb8bfbd6e1ad82
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      74: -6493606296778298951
-    second: Root|_unity_humanoid_t-pose
-  - first:
-      74: -4944036642924705335
-    second: Root|_unreal_epic_skeleton_pose
-  - first:
-      74: 2790562698028008677
-    second: Root|falling
-  - first:
-      74: 5246026450805046728
-    second: Root|falling_2
-  - first:
-      74: 5658188654733708996
-    second: Root|falling_Crash
-  - first:
-      74: 977824738959722129
-    second: Root|idle
-  - first:
-      74: -5801976509635050079
-    second: Root|jog
-  - first:
-      74: -4843670459952970555
-    second: Root|jog_root_motion
-  - first:
-      74: 1296258814987166289
-    second: Root|jump_downward
-  - first:
-      74: -5736311619262860744
-    second: Root|jump_landing
-  - first:
-      74: 3579034119939374141
-    second: Root|jump_mid_air
-  - first:
-      74: 7018679863949724907
-    second: Root|jump_up_root_motion
-  - first:
-      74: 6326069237285863266
-    second: Root|jump_up_root_motion.001
-  - first:
-      74: 8107420584538919620
-    second: Root|jump_upward
-  - first:
-      74: -7890513700120319190
-    second: Root|PlaneAction
-  - first:
-      74: -4260596208754333576
-    second: Root|rest_position
-  - first:
-      74: -1079564226002380184
-    second: Root|run
-  - first:
-      74: -1163359335536403850
-    second: Root|run_left
-  - first:
-      74: 2429724879010418435
-    second: Root|run_right
-  - first:
-      74: 3263509396927215265
-    second: Root|run_root_motion
-  - first:
-      74: 1710768263484265814
-    second: Root|stride_left
-  - first:
-      74: -3013258223067013932
-    second: Root|stride_right
-  - first:
-      74: -2246670657574278282
-    second: Root|t-Pose
-  - first:
-      74: 3648262157865128095
-    second: Root|walk
-  - first:
-      74: -4574124550746450626
-    second: Root|walk_left
-  - first:
-      74: 3550034971794716367
-    second: Root|walk_right
-  - first:
-      74: -8144612061470360024
-    second: Root|walk_root_motion
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m_legendary_robot_
-    second: {fileID: 2100000, guid: 7de1c638b3ea1c84fac0849720fb4894, type: 2}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
