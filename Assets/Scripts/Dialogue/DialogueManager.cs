@@ -6,6 +6,7 @@ using TMPro;
 
 [System.Serializable]
 public class Dialogue{
+    [Multiline]
     public string dialogueInput;
     public UnityEvent[] clickEvent;
 }
