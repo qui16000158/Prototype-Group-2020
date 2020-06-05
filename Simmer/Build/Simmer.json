@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Prototype Group 2020",
+"productVersion": "0.1",
+"dataUrl": "Simmer.data.unityweb",
+"wasmCodeUrl": "Simmer.wasm.code.unityweb",
+"wasmFrameworkUrl": "Simmer.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.12f1"
+}
